@@ -1,6 +1,7 @@
 import { Router } from "express";
 import { check } from "express-validator";
 import {
+  getUsuario,
   registrarUsuario,
   usuarioUpdate
 } from "./usuario.controller.js";
@@ -11,6 +12,8 @@ import {
 import { validarCampos } from '../middlewares/valodar-campos.js';
 
 const router = Router();
+
+router.get("/", getUsuario);
 
 router.post(
   "/",

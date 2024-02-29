@@ -13,6 +13,10 @@ const UserSchema = mongoose.Schema({
   password: {
     type: String,
     required: [true, "La contraseña es obligatoria"],
+  },
+  estado: {
+    type: Boolean,
+    default: true
   }
 });
 

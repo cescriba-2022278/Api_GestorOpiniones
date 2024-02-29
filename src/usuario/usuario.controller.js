@@ -2,6 +2,23 @@ import { response } from "express";
 import bcryptjs from 'bcryptjs';
 import Usuario from './usuario.model.js';
 
+export const getUsuario = async (req = request, res = response) => {
+    const { limite, desde } = req.query;
+    const query = { estado: true };
+
+    const [total, usuario] = await Promise.all([
+        Usuario.countDocuments(query),
+        Usuario.find(query)
+            .skip(Number(desde))
+            .limit(Number(limite)),
+    ]);
+
+    res.status(200).json({
+        total,
+        usuario,
+    });
+}
+
 export const registrarUsuario = async (req, res) => {
     const { nombre, correo, password } = req.body;
     const usuario = new Usuario({ nombre, correo, password });

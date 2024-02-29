@@ -1,0 +1,28 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "login",
+    "dateExported": "2024-02-29T04:51:28.326Z",
+    "version": "1.1",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "c3075078-09fe-43f9-a960-6454126cbc81",
+            "colId": "dc89d04a-b90d-4899-98ff-e8eb6a36bf54",
+            "containerId": "",
+            "name": "Inicio Sesion ",
+            "url": "http://localhost:3000/api/v2/login/login",
+            "method": "POST",
+            "sortNum": 10000,
+            "created": "2024-02-29T04:06:42.197Z",
+            "modified": "2024-02-29T04:45:30.646Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\r\n  \"correo\": \"darriola@gmail.com\",\r\n  \"password\": \"123456\"\r\n}\r\n\r\n\r\n\r\n",
+                "form": []
+            },
+            "tests": []
+        }
+    ]
+}
