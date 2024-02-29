@@ -9,7 +9,7 @@ import {
     existenteEmail,
     existeUsuarioById
 } from '../helpers/db-validator.js';
-import { validarCampos } from '../middlewares/valodar-campos.js';
+import { validarCampos } from '../middlewares/validar-campos.js';
 
 const router = Router();
 
