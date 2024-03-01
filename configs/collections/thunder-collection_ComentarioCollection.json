@@ -1,0 +1,61 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "ComentarioCollection",
+    "dateExported": "2024-03-01T04:50:57.019Z",
+    "version": "1.1",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "6cfb60b9-26a4-43fe-90e3-79a3f7109e00",
+            "colId": "fb183710-c593-4451-9dfc-50a801726444",
+            "containerId": "",
+            "name": "hacer comentario",
+            "url": "http://localhost:3000/api/v4/comentarios",
+            "method": "POST",
+            "sortNum": 10000,
+            "created": "2024-03-01T03:37:32.353Z",
+            "modified": "2024-03-01T04:40:07.882Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"comentario\": \"comentarioTest3\",\n  \"nombre\": \"Cesar Escriba\",\n  \"titulo\": \"Anime\"\n}\n",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "c8a1721b-5d8c-42f3-8f60-e906ebdc08a8",
+            "colId": "fb183710-c593-4451-9dfc-50a801726444",
+            "containerId": "",
+            "name": "editar Comentario",
+            "url": "http://localhost:3000/api/v4/comentarios/65e151896a122dd81764454e",
+            "method": "PUT",
+            "sortNum": 20000,
+            "created": "2024-03-01T04:26:53.696Z",
+            "modified": "2024-03-01T04:30:25.145Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"comentario\": \"Ya no esta la oferta :(\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "10de8fc6-d99b-482b-9d85-72f505bacb52",
+            "colId": "fb183710-c593-4451-9dfc-50a801726444",
+            "containerId": "",
+            "name": "eliminar comentario",
+            "url": "http://localhost:3000/api/v4/comentarios/65e15c23656da4a11d65ae11",
+            "method": "DELETE",
+            "sortNum": 30000,
+            "created": "2024-03-01T04:40:30.302Z",
+            "modified": "2024-03-01T04:42:49.229Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        }
+    ]
+}

@@ -23,7 +23,7 @@ export const crearPublicacion = async (req, res) => {
     });
 };
 
- export const editarPublicacion = async (req = request, res = response) => {
+export const editarPublicacion = async (req = request, res = response) => {
     const { id } = req.params;
     const { texto } = req.body;
 
@@ -36,7 +36,7 @@ export const crearPublicacion = async (req, res) => {
     });
 };
 
- export const eliminarPublicacion = async (req = request, res = response) => {
+export const eliminarPublicacion = async (req = request, res = response) => {
     const { id } = req.params;
     await Publicacion.findByIdAndDelete(id);
     res.status(200).json({

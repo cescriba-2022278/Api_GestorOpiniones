@@ -5,7 +5,6 @@ import {
   } from '../helpers/db-validator.js';
 import { crearPublicacion, editarPublicacion, eliminarPublicacion } from './publicacion.controller.js';
 import { validarCampos } from '../middlewares/validar-campos.js';
-import { validarJWT } from '../middlewares/validar-jwt.js';
 
 const router = Router();
 
