@@ -19,6 +19,15 @@ export const getUsuario = async (req = request, res = response) => {
     });
 }
 
+export const getUsuarioById = async (req, res) => {
+    const { id } = req.params;
+    const usuario = await Usuario.findOne({ _id: id });
+
+    res.status(200).json({
+        usuario,
+    });
+}
+
 export const registrarUsuario = async (req, res) => {
     const { nombre, correo, password } = req.body;
     const usuario = new Usuario({ nombre, correo, password });

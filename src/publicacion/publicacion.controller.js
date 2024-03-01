@@ -2,32 +2,18 @@ import { request, response } from "express";
 import Publicacion from './publicacion.model.js';
 import Usuario from '../usuario/usuario.model.js';
 
-export const savePet = async (req, res) => {
-    const data = req.body;
-    const user = await User.findOne({ correo: data.correo });
-    if (!user) return res.status(404).send({ 
-        message: 'Propietario no encontrado' 
-    });
-    const pet = new Pet({
-        ...data,
-        keeper: user._id,
-    });
-
-    await pet.save();
-    res.status(200).json({
-        pet
-    });
-}
-
-
 export const crearPublicacion = async (req, res) => {
-    const usuario = await Usuario.findOne({ correo });
+    const { titulo, categoria, texto, nombre } = req.body;
+    const usuario = await Usuario.findOne({ nombre });
     if (!usuario) {
-        return res.status(404).json({ 
+        return res.status(404).send({ 
             msg: 'Usuario no encontrado' 
         });
     }
     const publicacion = new Publicacion({
+        titulo, 
+        categoria, 
+        texto,
         autor: usuario._id
     });
     
